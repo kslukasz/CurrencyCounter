@@ -1,0 +1,21 @@
+input{
+  border:1px solid rgb(107, 107, 107);
+  margin: 10px;
+  padding: 2px;
+  color:rgb(107, 107, 107);
+  width:150px;
+}
+input:focus{
+  border-color: black;
+  color: black;
+}
+input:hover{
+  box-shadow:0 0 1px 0 black;
+}
+select{
+  border:1px solid rgb(107, 107, 107);
+  margin: 10px;
+  padding: 2px;
+  color:rgb(107, 107, 107);
+  width:150px;
+}
