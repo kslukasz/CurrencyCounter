@@ -7,18 +7,20 @@ function Converter() {
   const [loadedData, setLoadedData] = useState(false);
   const [error, setError] = useState("Ładowanie danych...")
 
-  const fetchData = () => { //pobieranie danych z pliku .json
+  const fetchData = (zloty) => { //pobieranie danych z pliku .json
     fetch(API)
       .then(response => response.json())
       .then(data => {
         // console.log(data[0].rates)    ; 
+        data[0].rates.unshift(zloty)
         setCurrency(data[0]);
         setLoadedData(true);
       })
     .catch(() => setError("Ups.. coś poszło nie tak, spróbuj ponownie"))
   }
-  useEffect(() => {    
-    fetchData();
+  useEffect(() => {  
+    const zloty ={currency:"PLN złoty", code:"PLN", mid:1}  
+    fetchData(zloty);
   }, []);
 
   const load = () =>{    
