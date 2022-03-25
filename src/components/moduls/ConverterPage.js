@@ -23,9 +23,7 @@ function ConverterPage(props) {
     const copyInput = { ...input }
     copyInput[nameInput] = event.target.value;
     setInput(copyInput)
-  }
-
-  // console.log(<select>{option()}</select>);
+  } 
 
   return (
     <>
